@@ -10,7 +10,9 @@
 </head>
 <body>
     <section class="container mt-2">
-        <h1>Passagem</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{% url 'index' %}">Passagem</a>
+        </nav>
         <p>Sua origem é: {{ form.origem.value }}</p>
         <p>Seu destino é: {{ form.destino.value }}</p>
         <p>Ida: {{ form.data_ida.value }}</p>
