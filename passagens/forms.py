@@ -29,4 +29,11 @@ class PassagemForms(forms.Form):
         else:
             return origem
 
+    def clean_destino(self):
+        destino = self.cleaned_data.get('destino')
+        if any(char.isdigit() for char in destino):
+            raise forms.ValidationError('Destino inválido: Valor numério inserido errado')
+        else:
+            return destino
+
 
